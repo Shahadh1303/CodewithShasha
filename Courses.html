@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <link rel="icon" href="logo_transparent.png" type="image/icon type">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  text-decoration: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #060000;
+  position: relative;
+}
+body::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  background:black;
+  clip-path: inset(47% 0 0 0);
+  z-index: -1;
+  height: 100%;
+}
+::selection{
+  background:	#FF676D;
+  color: #fff;
+}
+.container{
+  max-width: 950px;
+  width: 100%;
+  overflow: hidden;
+  padding: 80px 0;
+}
+.container .main-card{
+  display: flex;
+  justify-content: space-evenly;
+  width: 200%;
+  transition: 1s;
+}
+#two:checked ~ .main-card{
+  margin-left: -100%;
+}
+.container .main-card .cards{
+  width: calc(100% / 2 - 10px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 20px;
+  justify-content: space-between;
+}
+.main-card .cards .card{
+  width: calc(100% / 3 - 10px);
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+.main-card .cards .card:hover{
+  transform: translateY(-15px);
+}
+.cards .card .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.cards .card .content .img{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #FF676D;
+  margin-bottom: 14px;
+}
+.card .content .img img{
+  height: 100%;
+  width: 100%;
+  border: 3px solid #ffff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card .content .name{
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+.card .content .job{
+  font-size: 20px;
+  color: #be0c12;
+}
+.card .content .media-icons{
+  margin-top: 10px;
+  display: flex;
+
+}
+.media-icons a{
+  text-align: center;
+  line-height: 33px;
+  height: 35px;
+  width: 35px;
+  margin: 0 4px;
+  font-size: 14px;
+  color: #FFF;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: #FF676D;
+  transition: all 0.3s ease;
+}
+.media-icons a:hover{
+  color: #FF676D;
+  background-color: #fff;
+  border-color: #FF676D;
+}
+ .container .button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.button label{
+  height: 15px;
+  width: 15px;
+  border-radius: 20px;
+  background: #fff;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.button label.active{
+  width: 35px;
+}
+#one:checked ~ .button .one{
+  width: 35px;
+}
+#one:checked ~ .button .two{
+  width: 15px;
+}
+#two:checked ~ .button .one{
+  width: 15px;
+}
+#two:checked ~ .button .two{
+  width: 35px;
+}
+input[type="radio"]{
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-card .cards .card{
+    margin: 20px 0 10px 0;
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 600px) {
+  .main-card .cards .card{
+    /* margin: 20px 0 10px 0; */
+    width: 100%;
+  }
+  
+
+
+   </style>
+<body>
+  <div class="container">
+    <input type="radio" name="dot" id="one">
+    <input type="radio" name="dot" id="two">
+    <div class="main-card">
+      <div class="cards">
+        <div class="card">
+         <div class="content">
+           <div class="img">
+            <img src="https://pixelmechanics.com.sg/wp-content/uploads/2019/06/html5-logo-for-web-development.png" alt="">
+           </div>
+           <div class="details">
+             <a href="Html.html"><div class="name">Html</div></a>
+             <div class="job">Front-end Development</div>
+             
+           </div>
+           <br>
+     
+         </div>
+        </div>
+        <div class="card">
+         <div class="content">
+            <div class="img">
+            <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" alt="">
+           </div>
+           <div class="details">
+            <a href="Css.html"><div class="name">Css</div></a>
+             <div class="job">Front-end Development</div>
+           </div>
+   
+         </div>
+        </div>
+        <div class="card">
+         <div class="content">
+            <div class="img">
+            <img src="https://thumbs.dreamstime.com/b/javascript-logo-javascript-logo-white-background-vector-format-available-136765881.jpg" alt="">
+           </div>
+           <div class="details">
+            <a href="JavaScript.html"><div class="name">JavaScript</div></a>
+             <div class="job">Front-end Development</div>
+           </div>
+       
+         </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card">
+         <div class="content">
+            <div class="img">
+            <img src="https://mpng.subpng.com/20180427/zaq/kisspng-web-development-php-programming-language-computer-5ae381e5d40ec8.1931377315248593658686.jpg" alt="">
+           </div>
+           <div class="details">
+            <a href="PHP.html"><div class="name">PHP</div></a>
+             <div class="job">Back-end Development</div>
+           </div>
+          
+         </div>
+        </div>
+        <div class="card">
+         <div class="content">
+           <div class="img">
+             <img src="data:image/png;base64,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" alt="">
+           </div>
+           <div class="details">
+            <a href="Python.html"><div class="name">Python</div></a>
+             <div class="job">High-level programming language</div>
+        
+           </div>
+         
+           
+         </div>
+        </div>
+        <div class="card">
+         <div class="content">
+           <div class="img">
+             <img src="https://dev.java/assets/images/java-logo-vert-blk.png" alt="">
+           </div>
+           <div class="details">
+            <a href="Java.html"><div class="name">Java</div></a>
+             <div class="job">High-level programming language</div>
+        
+           </div>
+       
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <label for="one" class=" active one"></label>
+      <label for="two" class="two"></label>
+    </div>
+  </div>
+</body>
+</html>

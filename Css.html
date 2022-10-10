@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Css | CodewithShasha</title>
+  <link rel="icon" href="logo_transparent.png" type="image/icon type">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<style>
+  body{
+    padding-bottom: 100px;
+   
+  }
+  td{
+    padding-left: 55px;
+  }
+  th{
+    
+    padding-left: 55px;
+  }
+  tr{
+    padding-top: 10000000px;
+  }
+  
+  h2{
+    padding-top: 100px;
+    padding-left: 50px;
+  }
+  p{
+    padding-left: 100px;
+    padding-top: 25px;
+    padding-right: 50px;
+    
+  }
+  h3{
+    padding-left: 100px;
+    padding-top: 55px;
+    
+  }
+  .idk{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  h5{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  ol{
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-right: 30px;
+  }
+  img{
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+  a{
+    color:cyan;
+  }
+  pre{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  .highlight{
+    padding-top: 50px;
+    padding-left: 100px;
+    width: 900px;
+  }
+  
+
+</style>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="index.html">CodewithShasha</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Courses</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Features</label>
+            <ul>
+              <li><a href="Html.html">Html</a></li>
+              <li><a href="Css.html">Css</a></li>
+              <li><a href="JavaScript.html">JavaScript</a></li>
+              <li><a href="PHP.html">PHP</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Fields</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="Fron-end Development.html">Front-end Development</a></li>
+              <li><a href="Back-end Development.html">Back-end Development</a></li>
+              <li><a href="Ethical Hacking.html">Ethical Hacking</a></li>
+            </li>
+            </ul>
+          </li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+  <h2 id="2-introduction-to-css">2. Introduction to CSS</h2>
+  <h3 id="21-how-does-css-look-like">2.1. How does CSS look like</h3>
+  <p>A CSS <strong>rule set</strong> has one part called <strong>selector</strong>, and the other part called <strong>declaration</strong>. The declaration contains various <strong>rules</strong>, each composed by a <strong>property</strong>, and a <strong>value</strong>.</p>
+  <p>In this example, <code>p</code> is the selector, and applies one rule which sets the value <code>20px</code> to the <code>font-size</code> property:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Multiple rules are stacked one after the other:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">a</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>A selector can target one or more items:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">p</span>, <span style="color:#a6e22e">a</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">font</span><span style="color:#f92672">-</span><span style="color:#a6e22e">size</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span><span style="color:#a6e22e">px</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>and it can target HTML tags, like above, or HTML elements that contain a certain class attribute with <code>.my-class</code>, or HTML elements that have a specific <code>id</code> attribute with <code>#my-id</code>.</p>
+  <p>More advanced selectors allow you to choose items whose attribute matches a specific value, or also items which respond to pseudo-classes (more on that later)</p>
+  <h3 id="22-semicolons">2.2. Semicolons</h3>
+  <p>Every CSS rule terminates with a semicolon. Semicolons are <strong>not</strong> optional, except after the last rule, but I suggest to always use them for consistency and to avoid errors if you add another property and forget to add the semicolon on the previous line.</p>
+  <h3 id="23-formatting-and-indentation">2.3. Formatting and indentation</h3>
+  <p>There is no fixed rule for formatting. This CSS is valid:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">a</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>but a pain to see. Stick to some conventions, like the ones you see in the examples above: stick selectors and the closing brackets to the left, indent 2 spaces for each rule, have the opening bracket on the same line of the selector, separated by one space.</p>
+  <p>Correct and consistent use of spacing and indentation is a visual aid in understanding your code.</p>
+  <h2 id="3-a-brief-history-of-css">3. A brief history of CSS</h2>
+  <p>Before moving on, I want to give you a brief recap of the history of CSS.</p>
+  <p>CSS was grown out of the necessity of styling web pages. Before CSS was introduced, people wanted a way to style their web pages, which looked all very similar and &ldquo;academic&rdquo; back in the day. You couldn&rsquo;t do much in terms of personalisation.</p>
+  <p>HTML 3.2 introduced the option of defining colors inline as HTML element attributes, and presentational tags like <code>center</code> and <code>font</code>, but that escalated quickly into a far from ideal situation.</p>
+  <p>CSS let us move everything presentation-related from the HTML to the CSS, so that HTML could get back being the format that defines the structure of the document, rather than how things should look in the browser.</p>
+  <p>CSS is continuously evolving, and CSS you used 5 years ago might just be outdated, as new idiomatic CSS techniques emerged and browsers changed.</p>
+  <p>It&rsquo;s hard to imagine the times when CSS was born and how different the web was.</p>
+  <p>At the time, we had several competing browsers, the main ones being Internet Explorer or Netscape Navigator.</p>
+  <p>Pages were styled by using HTML, with special presentational tags like <code>bold</code> and special attributes, most of which are now deprecated.</p>
+  <p>This meant you had a limited amount of customisation opportunities.</p>
+  <p>The bulk of the styling decisions were left to the browser.</p>
+  <p>Also, you built a site specifically for one of them, because each one introduced different non-standard tags to give more power and opportunities.</p>
+  <p>Soon people realised the need for a way to style pages, in a way that would work across all browsers.</p>
+  <p>After the initial idea proposed in 1994, CSS got its first release in 1996, when the CSS Level 1 (&ldquo;CSS 1&rdquo;) recommendation was published.</p>
+  <p>CSS Level 2 (&ldquo;CSS 2&rdquo;) got published in 1998.</p>
+  <p>Since then, work began on CSS Level 3. The CSS Working Group decided to split every feature and work on it separately, in modules.</p>
+  <p>Browsers weren&rsquo;t especially fast at implementing CSS. We had to wait until 2002 to have the first browser implement the full CSS specification: IE for Mac, as nicely described in this CSS Tricks post: <a href="https://css-tricks.com/look-back-history-css/">https://css-tricks.com/look-back-history-css/</a></p>
+  <p>Internet Explorer implemented the box model incorrectly right from the start, which led to years of pain trying to have the same style applied consistently across browsers. We had to use various tricks and hacks to make browsers render things as we wanted.</p>
+  <p>Today things are much, much better. We can just use the CSS standards without thinking about quirks, most of the time, and CSS has never been more powerful.</p>
+  <p>We don&rsquo;t have official release numbers for CSS any more now, but the CSS Working Group releases a &ldquo;snapshot&rdquo; of the modules that are currently considered stable and ready to be included in browsers. This is the latest snapshot, from 2018: <a href="https://www.w3.org/TR/css-2018/">https://www.w3.org/TR/css-2018/</a></p>
+  <p>CSS Level 2 is still the base for the CSS we write today, and we have many more features built on top of it.</p>
+  <h2 id="4-adding-css-to-an-html-page">4. Adding CSS to an HTML page</h2>
+  <p>CSS is attached to an HTML page in different ways.</p>
+  <h3 id="41-1-using-the-link-tag">4.1. 1: Using the <code>link</code> tag</h3>
+  <p>The <code>link</code> tag is the way to include a CSS file. This is the preferred way to use CSS as it&rsquo;s intended to be used: one CSS file is included by all the pages of your site, and changing one line on that file affects the presentation of all the pages in the site.</p>
+  <p>To use this method, you add a <code>link</code> tag with the <code>href</code> attribute pointing to the CSS file you want to include. You add it inside the <code>head</code> tag of the site (not inside the <code>body</code> tag):</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;myfile.css&#34;</span> /&gt;
+  </span></span></code></pre></div><p>The <code>rel</code> and <code>type</code> attributes are required too, as they tell the browser which kind of file we are linking to.</p>
+  <h3 id="42-2-using-the-style-tag">4.2. 2: using the <code>style</code> tag</h3>
+  <p>Instead of using the <code>link</code> tag to point to separate stylesheet containing our CSS, we can add the CSS directly inside a <code>style</code> tag. This is the syntax:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">style</span>&gt;
+  </span></span><span style="display:flex;"><span>  <span style="color:#f92672">..</span>.<span style="color:#a6e22e">our</span> <span style="color:#f92672">CSS</span><span style="color:#f92672">...;</span>
+  </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">style</span>&gt;
+  </span></span></code></pre></div><p>Using this method we can avoid creating a separate CSS file. I find this is a good way to experiment before &ldquo;formalising&rdquo; CSS to a separate file, or to add a special line of CSS just to a file.</p>
+  <h3 id="43-3-inline-styles">4.3. 3: inline styles</h3>
+  <p>Inline styles are the third way to add CSS to a page. We can add a <code>style</code> attribute to any HTML tag, and add CSS into it.</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+  </span></span></code></pre></div><p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: yellow&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+  </span></span></code></pre></div><h2 id="5-selectors">5. Selectors</h2>
+  <p>A selector allows us to associate one or more declarations to one or more elements on the page.</p>
+  <h3 id="51-basic-selectors">5.1. Basic selectors</h3>
+  <p>Suppose we have a <code>p</code> element on the page, and we want to display the words into it using the yellow color.</p>
+  <p>We can <strong>target</strong> that element using this selector <code>p</code>, which targets all the element using the <code>p</code> tag in the page. A simple CSS rule to achieve what we want is:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Every HTML tag has a corresponding selector, for example: <code>div</code>, <code>span</code>, <code>img</code>.</p>
+  <p>If a selector matches multiple elements, all the elements in the page will be affected by the change.</p>
+  <p>HTML elements have 2 attributes which are very commonly used within CSS to associate styling to a specific element on the page: <code>class</code> and <code>id</code>.</p>
+  <p>There is one big difference between those two: inside an HTML document you can repeat the same <code>class</code> value across multiple elements, but you can only use an <code>id</code> once. As a corollary, using classes you can select an element with 2 or more specific class names, something not possible using ids.</p>
+  <p>Classes are identified using the <code>.</code> symbol, while ids using the <code>#</code> symbol.</p>
+  <p>Example using a class:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">dog-name</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Example using an id:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#dog-name {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="52-combining-selectors">5.2. Combining selectors</h3>
+  <p>So far we&rsquo;ve seen how to target an element, a class or an id. Let&rsquo;s introduce more powerful selectors.</p>
+  <h4 id="521-targeting-an-element-with-a-class-or-id">5.2.1. Targeting an element with a class or id</h4>
+  <p>You can target a specific element that has a class, or id, attached.</p>
+  <p>Example using a class:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span>.<span style="color:#a6e22e">dog-name</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Example using an id:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span>#dog-name {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Why would you want to do that, if the class or id already provides a way to target that element? You might have to do that to have more specificity. We&rsquo;ll see what that means later.</p>
+  <h4 id="522-targeting-multiple-classes">5.2.2. Targeting multiple classes</h4>
+  <p>You can target an element with a specific class using <code>.class-name</code>, as you saw previously. You can target an element with 2 (or more) classes by combining the class names separated with a dot, without spaces.</p>
+  <p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name roger&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">dog-name</span>.<span style="color:#a6e22e">roger</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h4 id="523-combining-classes-and-ids">5.2.3. Combining classes and ids</h4>
+  <p>In the same way, you can combine a class and an id.</p>
+  <p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;roger&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">dog-name</span>#roger {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="53-grouping-selectors">5.3. Grouping selectors</h3>
+  <p>You can combine selectors to apply the same declarations to multiple selectors. To do so, you separate them with a comma.</p>
+  <p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;My dog name is:&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt; Roger &lt;/<span style="color:#f92672">span</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span><span style="color:#f92672">,</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">dog-name</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>You can add spaces in those declarations to make them more clear:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span><span style="color:#f92672">,</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">dog-name</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="54-follow-the-document-tree-with-selectors">5.4. Follow the document tree with selectors</h3>
+  <p>We&rsquo;ve seen how to target an element in the page by using a tag name, a class or an id.</p>
+  <p>You can create a more specific selector by combining multiple items to follow the document tree structure. For example, if you have a <code>span</code> tag nested inside a <code>p</code> tag, you can target that one without applying the style to a <code>span</code> tag not included in a <code>p</code> tag:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span>&gt; Hello! &lt;/<span style="color:#f92672">span</span>&gt;
+  </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;
+  </span></span><span style="display:flex;"><span>  My dog name is:
+  </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt; Roger &lt;/<span style="color:#f92672">span</span>&gt;
+  </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>See how we used a space between the two tokens <code>p</code> and <code>span</code>.</p>
+  <p>This works even if the element on the right is multiple levels deep.</p>
+  <p>To make the dependency strict on the first level, you can use the <code>&gt;</code> symbol between the two tokens:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>In this case, if a <code>span</code> is not a first children of the <code>p</code> element, it&rsquo;s not going to have the new color applied.</p>
+  <p>Direct children will have the style applied:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;
+  </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">span</span>&gt; This is yellow &lt;/<span style="color:#f92672">span</span>&gt;
+  </span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">strong</span>&gt;
+  </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">span</span>&gt; This is not yellow &lt;/<span style="color:#f92672">span</span>&gt;
+  </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">strong</span>&gt;
+  </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><p>Adjacent sibling selectors let us style an element only if preceded by a specific element. We do so using the <code>+</code> operator:</p>
+  <p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#f92672">+</span> <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>This will assign the color yellow to all span elements preceded by a <code>p</code> element:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span>&gt;This is a paragraph&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">span</span>&gt;This is a yellow span&lt;/<span style="color:#f92672">span</span>&gt;
+  </span></span></code></pre></div><p>We have a lot more selectors we can use:</p>
+  <ol>
+  <li>attribute selectors</li>
+  <li>pseudo class selectors</li>
+  <li>pseudo element selectors</li>
+  </ul>
+  <p>We&rsquo;ll find all about them in the next sections.</p>
+  <h2 id="6-cascade">6. Cascade</h2>
+  <p>Cascade is a fundamental concept of CSS. After all, it&rsquo;s in the name itself, the first C of CSS - Cascading Style Sheets - it must be an important thing.</p>
+  <p>What does it mean?</p>
+  <p>Cascade is the process, or algorithm, that determines the properties applied to each element on the page. Trying to converge from a list of CSS rules that are defined in various places.</p>
+  <p>It does so taking in consideration:</p>
+  <ol>
+  <li>specificity</li>
+  <li>importance</li>
+  <li>inheritance</li>
+  <li>order in the file</li>
+  </ul>
+  <p>It also takes care of resolving conflicts.</p>
+  <p>Two or more competing CSS rules for the same property applied to the same element need to be elaborated according to the CSS spec, to determine which one needs to be applied.</p>
+  <p>Even if you just have one CSS file loaded by your page, there is other CSS that is going to be part of the process. We have the browser (user agent) CSS. Browsers come with a default set of rules, all different between browsers.</p>
+  <p>Then your CSS come into play.</p>
+  <p>Then the browser applies any user stylesheet, which might also be applied by browser extensions.</p>
+  <p>All those rules come into play while rendering the page.</p>
+  <p>We&rsquo;ll now see the concepts of specificity and inheritance.</p>
+  <h2 id="7-specificity">7. Specificity</h2>
+  <p>What happens when an element is targeted by multiple rules, with different selectors, that affect the same property?</p>
+  <p>For example, let&rsquo;s talk about this element:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dog-name&#34;</span>&gt;Roger&lt;/<span style="color:#f92672">p</span>&gt;
+  </span></span></code></pre></div><p>We can have</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">dog-name</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>and another rule that targets <code>p</code>, which sets the color to another value:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">red</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>And another rule that targets <code>p.dog-name</code>. Which rule is going to take precedence over the others, and why?</p>
+  <p>Enter specificity. <strong>The more specific rule will win</strong>.
+  If two or more rules have the <strong>same specificity, the one that appears last wins</strong>.</p>
+  <p>Sometimes what is more specific in practice is a bit confusing to beginners. I would say it&rsquo;s also confusing to experts that do not look at those rules that frequently, or simply overlook them.</p>
+  <h3 id="71-how-to-calculate-specificity">7.1. How to calculate specificity</h3>
+  <p>Specificity is calculated using a convention.</p>
+  <p>We have 4 slots, and each one of them starts at 0: <code>0 0 0 0 0</code>. The slot at the left is the most important, and the rightmost one is the least important.</p>
+  <p>Like it works for numbers in the decimal system: <code>1 0 0 0</code> is higher than <code>0 1 0 0</code>.</p>
+  <h4 id="711-slot-1">7.1.1. Slot 1</h4>
+  <p>The first slot, the rightmost one, is the least important.</p>
+  <p>We increase this value when we have an <strong>element selector</strong>. An element is a tag name. If you have more than one element selector in the rule, you increment accordingly the value stored in this slot.</p>
+  <p>Examples:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 0 1 */</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 0 1 */</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 0 2 */</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">p</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 0 2 */</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">div</span> <span style="color:#f92672">p</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 0 3 */</span>
+  </span></span></code></pre></div><h4 id="712-slot-2">7.1.2. Slot 2</h4>
+  <p>The second slot is incremented by 3 things:</p>
+  <ol>
+  <li>class selectors</li>
+  <li>pseudo-class selectors</li>
+  <li>attribute selectors</li>
+  </ul>
+  <p>Every time a rule meets one of those, we increment the value of the second column from the right.</p>
+  <p>Examples:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">name</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 1 0 */</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">users</span> .<span style="color:#a6e22e">name</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 2 0 */</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span><span style="color:#f92672">href</span><span style="color:#f92672">$=</span><span style="color:#e6db74">&#39;.pdf&#39;</span><span style="color:#f92672">]</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 1 0 */</span>
+  </span></span><span style="display:flex;"><span>:<span style="color:#a6e22e">hover</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 1 0 */</span>
+  </span></span></code></pre></div><p>Of course slot 2 selectors can be combined with slot 1 selectors:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">div</span> .<span style="color:#a6e22e">name</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 1 1 */</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">a</span><span style="color:#f92672">[</span><span style="color:#f92672">href</span><span style="color:#f92672">$=</span><span style="color:#e6db74">&#39;.pdf&#39;</span><span style="color:#f92672">]</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 1 1 */</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">pictures</span> <span style="color:#f92672">img</span>:<span style="color:#a6e22e">hover</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 2 1 */</span>
+  </span></span></code></pre></div><p>One nice trick with classes is that you can repeat the same class and increase the specificity. For example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#a6e22e">name</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 1 0 */</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">name</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 2 0 */</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">name</span>.<span style="color:#a6e22e">name</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 0 3 0 */</span>
+  </span></span></code></pre></div><h4 id="713-slot-3">7.1.3. Slot 3</h4>
+  <p>Slot 3 holds the most important thing that can affect your CSS specificity in a CSS file: the <code>id</code>.</p>
+  <p>Every element can have an <code>id</code> attribute assigned, and we can use that in our stylesheet to target the element.</p>
+  <p>Examples:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>#name {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 1 0 0 */</span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">user</span> #name {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 1 1 0 */</span>
+  </span></span><span style="display:flex;"><span>#name <span style="color:#f92672">span</span> {
+  </span></span><span style="display:flex;"><span>} <span style="color:#75715e">/* 0 1 0 1 */</span>
+  </span></span></code></pre></div><h4 id="714-slot-4">7.1.4. Slot 4</h4>
+  <p>Slot 4 is affected by inline styles. Any inline style will have precedence over any rule defined in an external CSS file, or inside the <code>style</code> tag in the page header.</p>
+  <p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#f92672">p</span> <span style="color:#f92672">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: red&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">Test</span><span style="color:#f92672">&lt;/</span><span style="color:#f92672">p</span><span style="color:#f92672">&gt;</span> <span style="color:#75715e">/* 1 0 0 0 */</span>
+  </span></span></code></pre></div><p>Even if any other rule in the CSS defines the color, this inline style rule is going to be applied. Except for one case - if <code>!important</code> is used, which fills the slot 5.</p>
+  <h3 id="72-importance">7.2. Importance</h3>
+  <p>Specificity does not matter if a rule ends with <code>!important</code>:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#75715e">!important</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>That rule will take precedence over any rule with more specificity</p>
+  <p>Adding <code>!important</code> in a CSS rule is going to make that rule be more important than any other rule, according to the specificity rules. The only way another rule can take precedence is to have <code>!important</code> as well, and have higher specificity in the other less important slots.</p>
+  <h3 id="73-tips">7.3. Tips</h3>
+  <p>In general you should use the amount of specificity you need, but not more. In this way, you can craft other selectors to overwrite the rules set by preceding rules without going mad.</p>
+  <p><code>!important</code> is a highly debated tool that CSS offers us. Many CSS experts advocate against using it. I find myself using it especially when trying out some style and a CSS rule has so much specificity that I need to use <code>!important</code> to make the browser apply my new CSS.</p>
+  <p>But generally, <code>!important</code> should have no place in your CSS files.</p>
+  <p>Using the <code>id</code> attribute to style CSS is also debated a lot, since it has a very high specificity. A good alternative is to use classes instead, which have less specificity, and so they are easier to work with, and they are more powerful (you can have multiple classes for an element, and a class can be reused multiple times).</p>
+  <h3 id="74-tools-to-calculate-the-specificity">7.4. Tools to calculate the specificity</h3>
+  <p>You can use the site <a href="https://specificity.keegan.st/">https://specificity.keegan.st/</a> to perform the specificity calculation for you automatically.</p>
+  <p>It&rsquo;s useful especially if you are trying to figure things out, as it can be a nice feedback tool.</p>
+  <h2 id="8-inheritance">8. Inheritance</h2>
+  <p>When you set some properties on a selector in CSS, they are inherited by all the children of that selector.</p>
+  <p>I said <em>some</em>, because not all properties show this behaviour.</p>
+  <p>This happens because some properties make sense to be inherited. This helps us write CSS much more concisely, since we don&rsquo;t have to explicitly set that property again on every single children.</p>
+  <p>Some other properties make more sense to <em>not</em> be inherited.</p>
+  <p>Think about fonts: you don&rsquo;t need to apply the <code>font-family</code> to every single tag of your page. You set the <code>body</code> tag font, and every children inherits it, along with other properties.</p>
+  <p>The <code>background-color</code> property, on the other hand, makes little sense to be inherited.</p>
+  <h3 id="81-properties-that-inherit">8.1. Properties that inherit</h3>
+  <p>Here is a list of the properties that do inherit. The list is non-comprehensive, but those rules are just the most popular ones you&rsquo;ll likely use:</p>
+  <ol>
+  <li>border-collapse</li>
+  <li>border-spacing</li>
+  <li>caption-side</li>
+  <li>color</li>
+  <li>cursor</li>
+  <li>direction</li>
+  <li>empty-cells</li>
+  <li>font-family</li>
+  <li>font-size</li>
+  <li>font-style</li>
+  <li>font-variant</li>
+  <li>font-weight</li>
+  <li>font-size-adjust</li>
+  <li>font-stretch</li>
+  <li>font</li>
+  <li>letter-spacing</li>
+  <li>line-height</li>
+  <li>list-style-image</li>
+  <li>list-style-position</li>
+  <li>list-style-type</li>
+  <li>list-style</li>
+  <li>orphans</li>
+  <li>quotes</li>
+  <li>tab-size</li>
+  <li>text-align</li>
+  <li>text-align-last</li>
+  <li>text-decoration-color</li>
+  <li>text-indent</li>
+  <li>text-justify</li>
+  <li>text-shadow</li>
+  <li>text-transform</li>
+  <li>visibility</li>
+  <li>white-space</li>
+  <li>widows</li>
+  <li>word-break</li>
+  <li>word-spacing</li>
+  </ol>
+  <p>I got it from this [nice Sitepoint article</p>
+  <h3 id="82-forcing-properties-to-inherit">8.2. Forcing properties to inherit</h3>
+  <p>What if you have a property that&rsquo;s not inherited by default, and you want it to, in a children?</p>
+  <p>In the children, you set the property value to the special keyword <code>inherit</code>.</p>
+  <p>Example:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">inherit</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="83-forcing-properties-to-not-inherit">8.3. Forcing properties to NOT inherit</h3>
+  <p>On the contrary, you might have a property inherited and you want to avoid so.</p>
+  <p>You can use the <code>revert</code> keyword to revert it. In this case, the value is reverted to the original value the browser gave it in its default stylesheet.</p>
+  <p>In practice this is rarely used, and most of the times you&rsquo;ll just set another value for the property to overwrite that inherited value.</p>
+  <h3 id="84-other-special-values">8.4. Other special values</h3>
+  <p>In addition to the <code>inherit</code> and <code>revert</code> special keywords we just saw, you can also set any property to:</p>
+  <ol>
+  <li><code>initial</code>: use the default browser stylesheet if available. If not, and if the property inherits by default, inherit the value. Otherwise do nothing.</li>
+  <li><code>unset</code>: if the property inherits by default, inherit. Otherwise do nothing.</li>
+  </ol>
+  <h2 id="9-import">9. Import</h2>
+  <p>From any CSS file you can import another CSS file using the <code>@import</code> directive.</p>
+  <p>Here is how you use it:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">myfile</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span>;
+  </span></span></code></pre></div><p>url() can manage absolute or relative URLs.</p>
+  <p>One important thing you need to know is that <code>@import</code> directives must be put before any other CSS in the file, or they will be ignored.</p>
+  <p>You can use media descriptors to only load a CSS file on the specific media:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">myfile</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span> <span style="color:#f92672">all</span>;
+  </span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">myfile-screen</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span> <span style="color:#f92672">screen</span>;
+  </span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">myfile-print</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span> <span style="color:#f92672">print</span>;
+  </span></span></code></pre></div><h2 id="10-attribute-selectors">10. Attribute selectors</h2>
+  <p>We already introduced several of the basic CSS selectors: using element selectors, class, id, how to combine them, how to target multiple classes, how to style several selectors in the same rule, how to follow the page hierarchy with child and direct child selectors, and adjacent siblings.</p>
+  <p>In this section we&rsquo;ll analyze attribute selectors, and we&rsquo;ll talk about pseudo class and pseudo element selectors in the next 2 sections.</p>
+  <h3 id="101-attribute-presence-selectors">10.1. Attribute presence selectors</h3>
+  <p>The first selector type is the attribute presence selector.</p>
+  <p>We can check if an element <strong>has</strong> an attribute using the <code>[]</code> syntax. <code>p[id]</code> will select all <code>p</code> tags in the page that have an <code>id</code> attribute, regardless of its value:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span><span style="color:#f92672">[</span><span style="color:#f92672">id</span><span style="color:#f92672">]</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* ... */</span>
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="102-exact-attribute-value-selectors">10.2. Exact attribute value selectors</h3>
+  <p>Inside the brackets you can check the attribute value using <code>=</code>, and the CSS will be applied only if the attribute matches the exact value specified:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span><span style="color:#f92672">[</span><span style="color:#f92672">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;my-id&#39;</span><span style="color:#f92672">]</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#75715e">/* ... */</span>
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="103-match-an-attribute-value-portion">10.3. Match an attribute value portion</h3>
+  <p>While <code>=</code> let us check for exact value, we have other operators:</p>
+  <ol>
+  <li><code>*=</code> checks if the attribute contains the partial</li>
+  <li><code>^=</code> checks if the attribute starts with the partial</li>
+  <li><code>$=</code> checks if the attribute ends with the partial</li>
+  <li><code>|=</code> checks if the attribute starts with the partial and it&rsquo;s followed by a dash (common in classes, for example), or just contains the partial</li>
+  <li><code>~=</code> checks if the partial is contained in the attribute, but separated by spaces from the rest</li>
+  </ol>
+  <p>All the checks we mentioned are <strong>case sensitive</strong>.</p>
+  <p>If you add an <code>i</code> just before the closing bracket, the check will be case insensitive. It&rsquo;s supported in many browsers but not in all, check <a href="https://caniuse.com/#feat=css-case-insensitive">https://caniuse.com/#feat=css-case-insensitive</a>.</p>
+  <h2 id="11-pseudo-classes">11. Pseudo-classes</h2>
+  <p>Pseudo classes are predefined keywords that are used to select an element based on its <strong>state</strong>, or to target a specific child.</p>
+  <p>They start with a <strong>single colon</strong> <code>:</code>.</p>
+  <p>They can be used as part of a selector, and they are very useful to style active or visited links for example, change the style on hover, focus, or target the first child, or odd rows. Very handy in many cases.</p>
+  <p>These are the most popular pseudo classes you will likely use:</p>
+  <table>
+  <thead>
+  <tr>
+  <th>Pseudo class</th>
+  <th>Targets</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code>:active</code></td>
+  <td>an element being activated by the user (e.g. clicked). Mostly used on links or buttons</td>
+  </tr>
+  <tr>
+  <td><code>:checked</code></td>
+  <td>a checkbox, option or radio input types that are enabled</td>
+  </tr>
+  <tr>
+  <td><code>:default</code></td>
+  <td>the default in a set of choices (like, option in a select or radio buttons)</td>
+  </tr>
+  <tr>
+  <td><code>:disabled</code></td>
+  <td>an element disabled</td>
+  </tr>
+  <tr>
+  <td><code>:empty</code></td>
+  <td>an element with no children</td>
+  </tr>
+  <tr>
+  <td><code>:enabled</code></td>
+  <td>an element that&rsquo;s enabled (opposite to <code>:disabled</code>)</td>
+  </tr>
+  <tr>
+  <td><code>:first-child</code></td>
+  <td>the first child of a group of siblings</td>
+  </tr>
+  <tr>
+  <td><code>:focus</code></td>
+  <td>the element with focus</td>
+  </tr>
+  <tr>
+  <td><code>:hover</code></td>
+  <td>an element hovered with the mouse</td>
+  </tr>
+  <tr>
+  <td><code>:last-child</code></td>
+  <td>the last child of a group of siblings</td>
+  </tr>
+  <tr>
+  <td><code>:link</code></td>
+  <td>a link that&rsquo;s not been visited</td>
+  </tr>
+  <tr>
+  <td><code>:not()</code></td>
+  <td>any element not matching the selector passed. E.g. <code>:not(span)</code></td>
+  </tr>
+  <tr>
+  <td><code>:nth-child()</code></td>
+  <td>an element matching the specified position</td>
+  </tr>
+  <tr>
+  <td><code>:nth-last-child()</code></td>
+  <td>an element matching the specific position, starting from the end</td>
+  </tr>
+  <tr>
+  <td><code>:only-child</code></td>
+  <td>an element without any siblings</td>
+  </tr>
+  <tr>
+  <td><code>:required</code></td>
+  <td>a form element with the <code>required</code> attribute set</td>
+  </tr>
+  <tr>
+  <td><code>:root</code></td>
+  <td>represents the <code>html</code> element. It&rsquo;s like targeting <code>html</code>, but it&rsquo;s more specific. Useful in <a href="https://flaviocopes.com/css-variables/">CSS Variables</a>.</td>
+  </tr>
+  <tr>
+  <td><code>:target</code></td>
+  <td>the element matching the current URL fragment (for inner navigation in the page)</td>
+  </tr>
+  <tr>
+  <td><code>:valid</code></td>
+  <td>form elements that validated client-side successfully</td>
+  </tr>
+  <tr>
+  <td><code>:visited</code></td>
+  <td>a link that&rsquo;s been visited</td>
+  </tr>
+  </tbody>
+  </table>
+  <p>Let&rsquo;s do an example. A common one, actually. You want to style a link, so you create a CSS rule to target the <code>a</code> element:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">a</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Things seem to work fine, until you click one link. The link goes back to the predefined color (blue) when you click it. Then when you open the link and go back to the page, now the link is blue.</p>
+  <p>Why does that happen?</p>
+  <p>Because the link when clicked changes state, and goes in the <code>:active</code> state. And when it&rsquo;s been visited, it is in the <code>:visited</code> state. Forever, until the user clears the browsing history.</p>
+  <p>So, to correctly make the link yellow across all states, you need to write</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">a</span><span style="color:#f92672">,</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">a</span>:<span style="color:#a6e22e">visited</span><span style="color:#f92672">,</span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">a</span>:<span style="color:#a6e22e">active</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">yellow</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p><code>:nth-child()</code> deserves a special mention. It can be used to target odd or even children with <code>:nth-child(odd)</code> and <code>:nth-child(even)</code>.</p>
+  <p>It is commonly used in lists to color odd lines differently from even lines:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">ul</span>:<span style="color:#a6e22e">nth-child</span><span style="color:#f92672">(</span><span style="color:#f92672">odd</span><span style="color:#f92672">)</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">black</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>You can also use it to target the first 3 children of an element with <code>:nth-child(-n+3)</code>. Or you can style 1 in every 5 elements with <code>:nth-child(5n)</code>.</p>
+  <p>Some pseudo classes are just used for printing, like <code>:first</code>, <code>:left</code>, <code>:right</code>, so you can target the first page, all the left pages, and all the right pages, which are usually styled slightly differently.</p>
+  <h2 id="12-pseudo-elements">12. Pseudo-elements</h2>
+  <p>Pseudo-elements are used to style a specific part of an element.</p>
+  <p>They start with a double colon <code>::</code>.</p>
+  <blockquote>
+  <p>Sometimes you will spot them in the wild with a single colon, but this is only a syntax supported for backwards compatibility reasons. You should use 2 colons to distinguish them from pseudo-classes.</p>
+  </blockquote>
+  <p><code>::before</code> and <code>::after</code> are probably the most used pseudo-elements. They are used to add content before or after an element, like icons for example.</p>
+  <p>Here&rsquo;s the list of the pseudo-elements:</p>
+  <table>
+  <thead>
+  <tr>
+  <th>Pseudo-element</th>
+  <th>Targets</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+  <td><code>::after</code></td>
+  <td>creates a pseudo-element after the element</td>
+  </tr>
+  <tr>
+  <td><code>::before</code></td>
+  <td>creates a pseudo-element before the element</td>
+  </tr>
+  <tr>
+  <td><code>::first-letter</code></td>
+  <td>can be used to style the first letter of a block of text</td>
+  </tr>
+  <tr>
+  <td><code>::first-line</code></td>
+  <td>can be used to style the first line of a block of text</td>
+  </tr>
+  <tr>
+  <td><code>::selection</code></td>
+  <td>targets the text selected by the user</td>
+  </tr>
+  </tbody>
+  </table>
+  <p>Let&rsquo;s do an example. Say you want to make the first line of a paragraph slightly bigger in font size, a common thing in typography:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span>::<span style="color:#a6e22e">first-line</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">rem</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p>Or maybe you want the first letter to be bolder:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span>::<span style="color:#a6e22e">first-letter</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">bolder</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p><code>::after</code> and <code>::before</code> are a bit less intuitive. I remember using them when I had to add icons using CSS.</p>
+  <p>You specify the <code>content</code> property to insert any kind of content after or before an element:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span>::<span style="color:#a6e22e">before</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: url(<span style="color:#e6db74">/myimage.png</span>);
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">myElement</span>::<span style="color:#a6e22e">before</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#39;Hey Hey!&#39;</span>;
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h2 id="13-colors">13. Colors</h2>
+  <p>By default an HTML page is rendered by web browsers quite sadly in terms of the colors used.</p>
+  <p>We have a white background, black color, and blue links. That&rsquo;s it.</p>
+  <p>Luckily CSS gives us the ability to add colors to our designs.</p>
+  <p>We have these properties:</p>
+  <ol>
+  <li><code>color</code></li>
+  <li><code>background-color</code></li>
+  <li><code>border-color</code></li>
+  </ol>
+  <p>All of them accept a <strong>color value</strong>, which can be in different forms.</p>
+  <h3 id="131-named-colors">13.1. Named colors</h3>
+  <p>First, we have CSS keywords that define colors. CSS started with 16, but today there is a huge number of colors names:</p>
+  <ol>
+  <li><code>aliceblue</code></li>
+  <li><code>antiquewhite</code></li>
+  <li><code>aqua</code></li>
+  <li><code>aquamarine</code></li>
+  <li><code>azure</code></li>
+  <li><code>beige</code></li>
+  <li><code>bisque</code></li>
+  <li><code>black</code></li>
+  <li><code>blanchedalmond</code></li>
+  <li><code>blue</code></li>
+  <li><code>blueviolet</code></li>
+  <li><code>brown</code></li>
+  <li><code>burlywood</code></li>
+  <li><code>cadetblue</code></li>
+  <li><code>chartreuse</code></li>
+  <li><code>chocolate</code></li>
+  <li><code>coral</code></li>
+  <li><code>cornflowerblue</code></li>
+  <li><code>cornsilk</code></li>
+  <li><code>crimson</code></li>
+  <li><code>cyan</code></li>
+  <li><code>darkblue</code></li>
+  <li><code>darkcyan</code></li>
+  <li><code>darkgoldenrod</code></li>
+  <li><code>darkgray</code></li>
+  <li><code>darkgreen</code></li>
+  <li><code>darkgrey</code></li>
+  <li><code>darkkhaki</code></li>
+  <li><code>darkmagenta</code></li>
+  <li><code>darkolivegreen</code></li>
+  <li><code>darkorange</code></li>
+  <li><code>darkorchid</code></li>
+  <li><code>darkred</code></li>
+  <li><code>darksalmon</code></li>
+  <li><code>darkseagreen</code></li>
+  <li><code>darkslateblue</code></li>
+  <li><code>darkslategray</code></li>
+  <li><code>darkslategrey</code></li>
+  <li><code>darkturquoise</code></li>
+  <li><code>darkviolet</code></li>
+  <li><code>deeppink</code></li>
+  <li><code>deepskyblue</code></li>
+  <li><code>dimgray</code></li>
+  <li><code>dimgrey</code></li>
+  <li><code>dodgerblue</code></li>
+  <li><code>firebrick</code></li>
+  <li><code>floralwhite</code></li>
+  <li><code>forestgreen</code></li>
+  <li><code>fuchsia</code></li>
+  <li><code>gainsboro</code></li>
+  <li><code>ghostwhite</code></li>
+  <li><code>gold</code></li>
+  <li><code>goldenrod</code></li>
+  <li><code>gray</code></li>
+  <li><code>green</code></li>
+  <li><code>greenyellow</code></li>
+  <li><code>grey</code></li>
+  <li><code>honeydew</code></li>
+  <li><code>hotpink</code></li>
+  <li><code>indianred</code></li>
+  <li><code>indigo</code></li>
+  <li><code>ivory</code></li>
+  <li><code>khaki</code></li>
+  <li><code>lavender</code></li>
+  <li><code>lavenderblush</code></li>
+  <li><code>lawngreen</code></li>
+  <li><code>lemonchiffon</code></li>
+  <li><code>lightblue</code></li>
+  <li><code>lightcoral</code></li>
+  <li><code>lightcyan</code></li>
+  <li><code>lightgoldenrodyellow</code></li>
+  <li><code>lightgray</code></li>
+  <li><code>lightgreen</code></li>
+  <li><code>lightgrey</code></li>
+  <li><code>lightpink</code></li>
+  <li><code>lightsalmon</code></li>
+  <li><code>lightseagreen</code></li>
+  <li><code>lightskyblue</code></li>
+  <li><code>lightslategray</code></li>
+  <li><code>lightslategrey</code></li>
+  <li><code>lightsteelblue</code></li>
+  <li><code>lightyellow</code></li>
+  <li><code>lime</code></li>
+  <li><code>limegreen</code></li>
+  <li><code>linen</code></li>
+  <li><code>magenta</code></li>
+  <li><code>maroon</code></li>
+  <li><code>mediumaquamarine</code></li>
+  <li><code>mediumblue</code></li>
+  <li><code>mediumorchid</code></li>
+  <li><code>mediumpurple</code></li>
+  <li><code>mediumseagreen</code></li>
+  <li><code>mediumslateblue</code></li>
+  <li><code>mediumspringgreen</code></li>
+  <li><code>mediumturquoise</code></li>
+  <li><code>mediumvioletred</code></li>
+  <li><code>midnightblue</code></li>
+  <li><code>mintcream</code></li>
+  <li><code>mistyrose</code></li>
+  <li><code>moccasin</code></li>
+  <li><code>navajowhite</code></li>
+  <li><code>navy</code></li>
+  <li><code>oldlace</code></li>
+  <li><code>olive</code></li>
+  <li><code>olivedrab</code></li>
+  <li><code>orange</code></li>
+  <li><code>orangered</code></li>
+  <li><code>orchid</code></li>
+  <li><code>palegoldenrod</code></li>
+  <li><code>palegreen</code></li>
+  <li><code>paleturquoise</code></li>
+  <li><code>palevioletred</code></li>
+  <li><code>papayawhip</code></li>
+  <li><code>peachpuff</code></li>
+  <li><code>peru</code></li>
+  <li><code>pink</code></li>
+  <li><code>plum</code></li>
+  <li><code>powderblue</code></li>
+  <li><code>purple</code></li>
+  <li><code>rebeccapurple</code></li>
+  <li><code>red</code></li>
+  <li><code>rosybrown</code></li>
+  <li><code>royalblue</code></li>
+  <li><code>saddlebrown</code></li>
+  <li><code>salmon</code></li>
+  <li><code>sandybrown</code></li>
+  <li><code>seagreen</code></li>
+  <li><code>seashell</code></li>
+  <li><code>sienna</code></li>
+  <li><code>silver</code></li>
+  <li><code>skyblue</code></li>
+  <li><code>slateblue</code></li>
+  <li><code>slategray</code></li>
+  <li><code>slategrey</code></li>
+  <li><code>snow</code></li>
+  <li><code>springgreen</code></li>
+  <li><code>steelblue</code></li>
+  <li><code>tan</code></li>
+  <li><code>teal</code></li>
+  <li><code>thistle</code></li>
+  <li><code>tomato</code></li>
+  <li><code>turquoise</code></li>
+  <li><code>violet</code></li>
+  <li><code>wheat</code></li>
+  <li><code>white</code></li>
+  <li><code>whitesmoke</code></li>
+  <li><code>yellow</code></li>
+  <li><code>yellowgreen</code></li>
+  </ol>
+  <p>plus <code>tranparent</code>, and <code>currentColor</code> which points to the <code>color</code> property, for example useful to make the <code>border-color</code> inherit it.</p>
+  <p>They are defined in the <a href="https://www.w3.org/TR/css-color-4/">CSS Color Module, Level 4</a>. They are case insensitive.</p>
+  <p>Wikipedia has a <a href="https://en.wikipedia.org/wiki/Web_colors">nice table</a> which lets you pick the perfect color by its name.</p>
+  <p>Named colors are not the only option.</p>
+  <h3 id="132-rgb-and-rgba">13.2. RGB and RGBa</h3>
+  <p>You can use the <code>rgb()</code> function to calculate a color from its RGB notation, which sets the color based on its red-green-blue parts. From 0 to 255:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: rgb(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">255</span>); <span style="color:#75715e">/* white */</span>
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: rgb(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>); <span style="color:#75715e">/* black */</span>
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><p><code>rgba()</code> lets you add the alpha channel to enter a transparent part. That can be a number from 0 to 1:</p>
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">p</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">background-color</span>: rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.5</span>);
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre></div><h3 id="133-hexadecimal-notation">13.3. Hexadecimal notation</h3>
+  <p>Another option is to express the RGB parts of the colors in the hexadecimal notation, which is composed by 3 blocks.</p>
+  <p>Black, which is <code>rgb(0,0,0)</code> is expressed as <code>#000000</code> or <code>#000</code> (we can shortcut the 2 numbers to 1 if they are equal).</p>
+  <p>White, <code>rgb(255,255,255)</code> can be expressed as <code>#ffffff</code> or <code>#fff</code>.</p>
+  <p>The hexadecimal notation lets express a number from 0 to 255 in just 2 digits, since they can go from 0 to &ldquo;15&rdquo; (f).</p>
+  <p>We can add the alpha channel by adding 1 or 2 more digits at the end, for example <code>#00000033</code>. Not all browsers support the shortened notation, so use all 6 digits to express the RGB part.</p>
+  <h3 id="134-hsl-and-hsla">13.4. HSL and HSLa</h3>
+  <p>This is a more recent addition to CSS.</p>
+  <p>HSL = Hue Saturation Lightness.</p>
+  <p>In this notation, black is <code>hsl(0, 0%, 0%)</code> and white is <code>hsl(0, 0%, 100%)</code>.</p>
+  <p>If you are more familiar with HSL than RGB because of your past knowledge, you can definitely use that.</p>
+  <p>You also have <code>hsla()</code> which adds the alpha channel to the mix, again a number from 0 to 1: <code>hsl(0, 0%, 0%, 0.5)</code></p>
+  <h4 class="unknown">Hi guy i'll add more stuffs in few more day 😅</h4>
+  <h5><b>Thank You !!!</b></h5>
+  <style>
+      .unknown{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  </style>
+</body>
+</html>

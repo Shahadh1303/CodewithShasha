@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Java | CodewithShasha</title>
+  <link rel="icon" href="logo_transparent.png" type="image/icon type">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<style>
+  body{
+    padding-bottom: 100px;
+   
+  }
+  td{
+    padding-left: 55px;
+  }
+  th{
+    
+    padding-left: 55px;
+  }
+  tr{
+    padding-top: 10000000px;
+  }
+  
+  h2{
+    padding-top: 100px;
+    padding-left: 50px;
+  }
+  p{
+    padding-left: 100px;
+    padding-top: 25px;
+    padding-right: 50px;
+  }
+  h3{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  .idk{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  h5{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  ol{
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+  img{
+    padding-top: 50px;
+    padding-left: 100px;
+  }
+  a{
+    color:cyan;
+  }
+
+</style>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="index.html">CodewithShasha</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Courses</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Features</label>
+            <ul>
+              <li><a href="Html.html">Html</a></li>
+              <li><a href="Css.html">Css</a></li>
+              <li><a href="JavaScript.html">JavaScript</a></li>
+              <li><a href="PHP.html">PHP</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Fields</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="Fron-end Development.html">Front-end Development</a></li>
+              <li><a href="Back-end Development.html">Back-end Development</a></li>
+              <li><a href="Ethical Hacking.html">Ethical Hacking</a></li>
+            </li>
+            </ul>
+          </li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+<h2>What is Java?</h2>
+  <p>Java is a class-based object-oriented programming language for building web and desktop applications. It is the most popular programming language and the language of choice for Android programming.
+</p>
+<div class="img">
+  <img src="data:image/png;base64,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" width="auto" height="119px" >
+</div>
+<div>
+  <h3>Prerequisites for learning Java Tutorial?</h3>
+  
+  <p>This free Java for beginners tutorial is designed for beginners with little or no Java coding experience. These Java notes for beginners will help beginners to learn Java online for free.</p>
+</div>
+<div>
+
+<h2><a id="3" data-lasso-id="204406" href="#"></a>Why Learn Java Programming?</h2><ol>
+<li>Java is very easy to learn.</li>
+<li>Java developers are in demand, and it easy to get a job as a Java programmer.</li>
+<li>It has a good collection of open-source libraries.</li>
+<li>Java is free.</li>
+</ol>
+
+<h2>What are the Benefits of Java?</h2>
+<p>Here are the benefits of Java:</p>
+<ol>
+<li>Java is object-oriented.</li>
+<li>It is platform-independent.</li>
+<li>You can effortlessly write, compile, and debug programs compare to other programming languages.</li>
+</ol>
+<h2>Applications of Java Programming</h2>
+<p>Following are the major applications of Java Programming language:</p>
+<ol>
+<li>Mobile Applications</li>
+<li>Web Applications</li>
+<li>Web and Application servers</li>
+<li>Enterprise Applications</li>
+<li>Embedded Applications</li>
+<li>Desktop GUI Applications</li>
+</ol>
+<h2>What are the types of Java programs?</h2>
+<p>Here are the types of Java Program:</p>
+<ol>
+<li>Stand-alone applications.</li>
+<li>Web Applications using JSP, Servlet, Spring, Hibernate, JSF, etc</li>
+<li>Mobile Applications</li>
+<li>Enterprise Applications</li>
+</ol>
+
+
+</body>
+</html>

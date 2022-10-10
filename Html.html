@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learn Html | CodewithShasha</title>
+  <link rel="icon" href="logo_transparent.png" type="image/icon type">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<style>
+  body{
+    padding-bottom: 100px;
+  }
+  h2{
+    padding-top: 100px;
+    padding-left: 50px;
+  }
+  p{
+    padding-left: 100px;
+    padding-top: 25px;
+    padding-right: 50px;
+  }
+  h3{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+  ol{
+    padding-left: 100px;
+    padding-top: 50px;
+  }
+  pre{
+    padding-left: 100px;
+    padding-top: 55px;
+  }
+</style>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="index.html">CodewithShasha</a></div>
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Courses</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Features</label>
+            <ul>
+              <li><a href="Html.html">Html</a></li>
+              <li><a href="Css.html">Css</a></li>
+              <li><a href="JavaScript.html">JavaScript</a></li>
+              <li><a href="PHP.html">PHP</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="desktop-link">Fields</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="Fron-end Development.html">Front-end Development</a></li>
+              <li><a href="Back-end Development.html">Back-end Development</a></li>
+            </li>
+            </ul>
+          </li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+  </div>
+<h2>What is Html</h2>
+  <p>HTML is an acronym which stands for Hyper Text Markup Language which is used for creating web pages and web applications. Let's see what is meant by Hypertext Markup Language, and Web page.</p>
+<div>
+  <p><strong>Hyper Text</strong>: HyperText simply means "Text within Text." A text has a link within it, is a hypertext. Whenever you click on a link which brings you to a new webpage, you have clicked on a hypertext. HyperText is a way to link two or more web pages (HTML documents) with each other.
+    <br>
+    <br>
+
+    <strong>Markup language</strong>: A markup language is a computer language that is used to apply layout and formatting conventions to a text document. Markup language makes text more interactive and dynamic. It can turn text into images, tables, links, etc.
+    <br>
+    <br>
+    
+    <strong>Web Page</strong> A web page is a document which is commonly written in HTML and translated by a web browser. A web page can be identified by entering an URL. A Web page can be of the static or dynamic type. With the help of HTML only, we can create static web pages.</p>
+    <h2>Hello World using HTML.</h2>
+    <p>Just to give you a little excitement about HTML, I'm going to give you a small conventional <b>HTML Hello World</b> program, You can try it using Demo link.</p>
+   
+    <pre class="prettyprint notranslate">
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+       &lt;head&gt;
+          &lt;title&gt;This is document title&lt;/title&gt;
+       &lt;/head&gt;	
+       &lt;body&gt;
+          &lt;h1&gt;This is a heading&lt;/h1&gt;
+          &lt;p&gt;Hello World!&lt;/p&gt;
+       &lt;/body&gt;	
+    &lt;/html&gt;
+    </pre>
+    <h2>Applications of HTML</h2>
+    <p>As mentioned before, HTML is one of the most widely used language over the web. I'm going to list few of them here:</p>
+    <ol class="list">
+    <li><p><b>Web pages development</b> - HTML is used to create pages which are rendered over the web. Almost every page of web is having html tags in it to render its details in browser.</p></li>
+    <li><p><b>Internet Navigation</b> - HTML provides tags which are used to navigate from one page to another and is heavily used in internet navigation.</p></li>
+    <li><p><b>Responsive UI</b> - HTML pages now-a-days works well on all platform, mobile, tabs, desktop or laptops owing to responsive design strategy.</p><li>
+    <li><p><b>Offline support</b> HTML pages once loaded can be made available offline on the machine without any need of internet.</p></li>
+    <li><p><b>Game development</b>- HTML5 has native support for rich experience and is now useful in gaming developent arena as well.</p></li>
+    </ol>
+    <h2>Audience</h2>
+    <p>This <b>HTML tutorial</b> is designed for the aspiring Web Designers and Developers with a need to understand the HTML in enough detail along with its simple overview, and practical examples. This tutorial will give you enough ingredients to start with HTML from where you can take yourself at higher level of expertise.</p>
+    <h2>Prerequisites</h2>
+    <p>Before proceeding with this <b>tutorial</b> you should have a basic working knowledge with Windows or Linux operating system, additionally you must be familiar with &minus;</p>
+    <ol class="list">
+    <li>Experience with any text editor like notepad, notepad&plus;&plus;, or Edit plus etc.</li>
+    <li>How to create directories and files on your computer.</li>
+    <li>How to navigate through different directories.</li>
+    <li>How to type content in a file and save them on a computer.</li>
+    <li>Understanding about images in different formats like JPEG, PNG format.</li>
+    </ol>
+    <div>
+      <h2>Heading Tags</h2>
+<p>Any document starts with a heading. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements <b>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;,</b> and <b>&lt;h6&gt;</b>. While displaying any heading, browser adds one line before and one line after that heading.</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Heading Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;h1&gt;This is heading 1&lt;/h1&gt;
+      &lt;h2&gt;This is heading 2&lt;/h2&gt;
+      &lt;h3&gt;This is heading 3&lt;/h3&gt;
+      &lt;h4&gt;This is heading 4&lt;/h4&gt;
+      &lt;h5&gt;This is heading 5&lt;/h5&gt;
+      &lt;h6&gt;This is heading 6&lt;/h6&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+
+<h2>Paragraph Tag</h2>
+<p>The <b>&lt;p&gt;</b> tag offers a way to structure your text into different paragraphs. Each paragraph of text should go in between an opening &lt;p&gt; and a closing &lt;/p&gt; tag as shown below in the example &minus;</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Paragraph Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;p&gt;Here is a first paragraph of text.&lt;/p&gt;
+      &lt;p&gt;Here is a second paragraph of text.&lt;/p&gt;
+      &lt;p&gt;Here is a third paragraph of text.&lt;/p&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+
+<h2>Line Break Tag</h2>
+<p>Whenever you use the <b>&lt;br /&gt;</b> element, anything following it starts from the next line. This tag is an example of an <b>empty</b> element, where you do not need opening and closing tags, as there is nothing to go in between them.</p>
+<p>The &lt;br /&gt; tag has a space between the characters <b>br</b> and the forward slash. If you omit this space, older browsers will have trouble rendering the line break, while if you miss the forward slash character and just use &lt;br&gt; it is not valid in XHTML.</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Line Break  Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;p&gt;Hello&lt;br /&gt;
+         You delivered your assignment ontime.&lt;br /&gt;
+         Thanks&lt;br /&gt;
+         Mahnaz&lt;/p&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+
+<h2>Centering Content</h2>
+<p>You can use <b>&lt;center&gt;</b> tag to put any content in the center of the page or any table cell.</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Centring Content Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;p&gt;This text is not in the center.&lt;/p&gt;
+      
+      &lt;center&gt;
+         &lt;p&gt;This text is in the center.&lt;/p&gt;
+      &lt;/center&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+
+<h2>Horizontal Lines</h2>
+<p>Horizontal lines are used to visually break-up sections of a document. The <b>&lt;hr&gt;</b> tag creates a line from the current position in the document to the right margin and breaks the line accordingly.</p>
+<p>For example, you may want to give a line between two paragraphs as in the given example below &minus;</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Horizontal Line Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;p&gt;This is paragraph one and should be on top&lt;/p&gt;
+      &lt;hr /&gt;
+      &lt;p&gt;This is paragraph two and should be at bottom&lt;/p&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+
+<p>Again <b>&lt;hr /&gt;</b> tag is an example of the <b>empty</b> element, where you do not need opening and closing tags, as there is nothing to go in between them.</p>
+<p>The <b>&lt;hr /&gt;</b> element has a space between the characters <b>hr</b> and the forward slash. If you omit this space, older browsers will have trouble rendering the horizontal line, while if you miss the forward slash character and just use <b>&lt;hr&gt;</b> it is not valid in XHTML</p>
+<h2>Preserve Formatting</h2>
+<p>Sometimes, you want your text to follow the exact format of how it is written in the HTML document. In these cases, you can use the preformatted tag <b>&lt;pre&gt;</b>.</p>
+<p>Any text between the opening <b>&lt;pre&gt;</b> tag and the closing <b>&lt;/pre&gt;</b> tag will preserve the formatting of the source document.</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Preserve Formatting Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;pre&gt;
+         function testFunction( strText ){
+            alert (strText)
+         }
+      &lt;/pre&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+
+<p>Try using the same code without keeping it inside <b>&lt;pre&gt;...&lt;/pre&gt;</b> tags</p>
+<h2>Nonbreaking Spaces</h2>
+<p>Suppose you want to use the phrase "12 Angry Men." Here, you would not want a browser to split the "12, Angry" and "Men" across two lines &minus;</p>
+<pre class="result notranslate">
+An example of this technique appears in the movie "12 Angry Men."
+</pre>
+<p>In cases, where you do not want the client browser to break text, you should use a nonbreaking space entity <b>&amp;nbsp;</b> instead of a normal space. For example, when coding the "12 Angry Men" in a paragraph, you should use something similar to the following code &minus;</p>
+<h3>Example</h3>
+
+<pre class="prettyprint notranslate">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Nonbreaking Spaces Example&lt;/title&gt;
+   &lt;/head&gt;
+	
+   &lt;body&gt;
+      &lt;p&gt;An example of this technique appears in the movie "12&amp;nbsp;Angry&amp;nbsp;Men."&lt;/p&gt;
+   &lt;/body&gt;
+	
+&lt;/html&gt;
+</pre>
+    </div>
+</div>
+</div>
+</body>
+</html>

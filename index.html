@@ -1,0 +1,665 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='' rel='icon' type='image/png'>
+
+    <link rel="icon" href="logo_transparent.png" type="image/icon type">
+
+<meta name='apple-mobile-web-app-capable' content='yes' />
+<meta charset="UTF-8">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="8yPChHf9coRPXiJdc2CX8IYID2trRaPsGbbTtWWFIOSoRKs1k7g78jXRpiuvKkt1s+qlG5u1Eqo65AfqiaCkMg==" />
+<style type='text/css'>:root{--brand_primary: #2b3636;--brand_secondary: #09A59A;--brand_heading: #494949;--brand_text: #494949;--brand_navbar_text: #FFFFFF;--brand_navbar_fixed_text: #FFFFFF;--brand_homepage_heading: #FFFFFF;--brand_course_heading: #FFFFFF;--brand_video_player_color: #2B3636;--font_family:Proxima;} @font-face {
+  font-family: 'Proxima';
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regular-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-style: italic;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-regitalic-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 300;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-light-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 600;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibold-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 600;
+  font-style: italic;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-semibolditalic-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: bold;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-bold-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: bold;
+  font-style: italic;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-boldit-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Proxima';
+  font-weight: 900;
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.eot?1307578394");
+  src: url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.eot?iefix") format("eot"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.woff?1307578394") format("woff"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.ttf?1307578394") format("truetype"), url("//assets.teachablecdn.com/fonts/proxima-nova/proximanova-extrabold-webfont.svg#webfont2rpW2ohz") format("svg");
+  font-display: swap; }
+</style>
+<link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/pages-47a7c134d21218c7a18c3e5742d3086186841a506614ffc093debb8dda650235.css" />
+<style>body{
+    overflow-x:hidden;
+}
+
+.featured-product-card__content__title{
+  color: #494949
+}
+
+.featured-product-card__content__subtitle{
+  color: #494949
+}
+.featured-product-card__author__name{
+   color: #494949
+}
+
+.logo a{
+  color: #fff;
+  font-size: 30px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  padding-right: 100px;
+}
+
+</style>
+<title>Home | CodewithShasha</title>
+<meta name="description" content="Learn a wide range of web and app technologies. From Web Development with HTML, CSS and Javascript to designing web pages with Figma.">
+<link rel="canonical" href="https://developedbyed.com/p/home">
+<meta property="og:description" content="Learn a wide range of web and app technologies. From Web Development with HTML, CSS and Javascript to designing web pages with Figma.">
+<meta property="og:image" content="https://www.filepicker.io/api/file/e3JfpP8WTraGudQry36M">
+<meta property="og:title" content="developedbyed | Programming and Design Courses made fun and affordable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://developedbyed.com/p/home">
+<meta name="brand_video_player_color" content="#2B3636">
+<meta name="site_title" content="developedbyed | Creative Programming and Design Courses">
+<script src='//fast.wistia.com/assets/external/E-v1.js'></script>
+<script src='https://www.recaptcha.net/recaptcha/api.js' async defer></script>
+
+
+      <meta name="asset_host" content="https://fedora.teachablecdn.com">
+     <script src="https://fedora.teachablecdn.com/packs/pages--700f0a64a1250bcfafcf.js"></script>
+<meta id='iris-url' data-iris-url=https://eventable.teachable.cloud />
+<script type="text/javascript">
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])},heap.load("318805607");
+  window.heapShouldTrackUser = true;
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1797774831160115"
+     crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+  var _user_id = ''; 
+  var _session_id = '5fddd5735ac86f7707073428856027a5'; 
+
+  var _sift = window._sift = window._sift || [];
+  _sift.push(['_setAccount', '2e541754ec']);
+  _sift.push(['_setUserId', _user_id]);
+  _sift.push(['_setSessionId', _session_id]);
+  _sift.push(['_trackPageview']);
+
+  (function() {
+    function ls() {
+      var e = document.createElement('script');
+      e.src = 'https://cdn.sift.com/s.js';
+      document.body.appendChild(e);
+    }
+    if (window.attachEvent) {
+      window.attachEvent('onload', ls);
+    } else {
+      window.addEventListener('load', ls, false);
+    }
+  })();
+</script>
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-926383889"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-926383889');
+</script>
+
+
+
+<script>
+  if(typeof ga != 'function') {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  }
+  ga('create', 'UA-44397410-1', 'auto', {'name': 'fedoraTracker', 'allowLinker': true});
+  ga('fedoraTracker.set', 'anonymizeIp', false);
+  ga('fedoraTracker.require', 'linker');
+  ga('fedoraTracker.linker:autoLink', ['developedbyed.com',  'sso.teachable.com'], false, true );
+  ga('fedoraTracker.require', 'ecommerce');
+  ga('fedoraTracker.require', 'ec');
+  ga('fedoraTracker.send', 'pageview');
+  ga('create', 'UA-44397410-4', 'auto', {'name': 'teachableTracker', 'allowLinker': true});
+  ga('teachableTracker.set', 'anonymizeIp', false);
+  ga('teachableTracker.require', 'linker');
+  ga('teachableTracker.linker:autoLink', ['developedbyed.com', 'sso.teachable.com'], false, true );
+  ga('teachableTracker.require', 'ecommerce');
+  ga('teachableTracker.require', 'ec');
+  ga('teachableTracker.send', 'pageview');
+</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  </head>
+  <body class="revamped_lecture_player">
+          <meta http-content='IE=Edge' http-equiv='X-UA-Compatible'>
+      <meta content='width=device-width,initial-scale=1.0,user-scalable=no' name='viewport'>
+<meta id="fedora-keys" data-commit-sha="1ac93da1fafee560a501748240231fcb4818552a" data-env="production" data-sentry-public-dsn="https://8149a85a83fa4ec69640c43ddd69017d@sentry.io/120346" data-stripe="pk_live_hkgvgSBxG4TAl3zGlXiB1KUX" data-track-all-ahoy="false" data-track-changes-ahoy="false" data-track-clicks-ahoy="false" data-track-sumbits-ahoy="false" data-filepicker="ADNupMnWyR7kCWRvm76Laz" data-iris-url="https://eventable.teachable.cloud" /><meta id="fedora-data" data-report-card="{}" data-course-ids="[]" data-completed-lecture-ids="[]" data-school-id="357209" data-school-launched="true" data-preview="logged_out" data-turn-off-fedora-branding="true" data-plan-supports-whitelabeling="true" data-powered-by-text="Powered by" data-asset-path="//https://fedora.teachablecdn.com/assets/footer/teachable-logomark-white-31d2296978598bacace50e6d48a2e1223c20a9b074af424acdd465676f81560f.svg" data-school-preferences="{&quot;ssl_forced&quot;:&quot;true&quot;,&quot;anonymize_ips&quot;:&quot;false&quot;,&quot;bazaar_enabled&quot;:&quot;false&quot;,&quot;paypal_enabled&quot;:&quot;true&quot;,&quot;autoplay_lectures&quot;:&quot;true&quot;,&quot;comments_threaded&quot;:&quot;true&quot;,&quot;course_blocks_beta&quot;:&quot;true&quot;,&quot;eu_vat_tax_enabled&quot;:&quot;false&quot;,&quot;legacy_back_office&quot;:&quot;false&quot;,&quot;themeable_disabled&quot;:&quot;false&quot;,&quot;back_office_enabled&quot;:&quot;true&quot;,&quot;comments_moderation&quot;:&quot;false&quot;,&quot;eu_vat_tax_eligible&quot;:&quot;true&quot;,&quot;charge_exclusive_tax&quot;:&quot;true&quot;,&quot;send_receipts_emails&quot;:&quot;true&quot;,&quot;autocomplete_lectures&quot;:&quot;true&quot;,&quot;class_periods_enabled&quot;:&quot;false&quot;,&quot;authors_can_manage_pbc&quot;:&quot;true&quot;,&quot;css_properties_enabled&quot;:&quot;false&quot;,&quot;preenrollments_enabled&quot;:&quot;false&quot;,&quot;new_text_editor_enabled&quot;:&quot;true&quot;,&quot;require_terms_agreement&quot;:&quot;true&quot;,&quot;send_new_comment_emails&quot;:&quot;true&quot;,&quot;send_drip_content_emails&quot;:&quot;true&quot;,&quot;ssl_forced_from_creation&quot;:&quot;true&quot;,&quot;turn_off_fedora_branding&quot;:&quot;true&quot;,&quot;allow_comment_attachments&quot;:&quot;true&quot;,&quot;authors_can_email_students&quot;:&quot;true&quot;,&quot;authors_can_manage_coupons&quot;:&quot;true&quot;,&quot;teachable_accounts_enabled&quot;:&quot;true&quot;,&quot;teachable_payments_enabled&quot;:&quot;true&quot;,&quot;authors_can_import_students&quot;:&quot;false&quot;,&quot;authors_can_publish_courses&quot;:&quot;true&quot;,&quot;internal_subscriptions_beta&quot;:&quot;true&quot;,&quot;recaptcha_enabled_on_signup&quot;:&quot;true&quot;,&quot;tax_form_collection_enabled&quot;:&quot;false&quot;,&quot;display_vat_inclusive_prices&quot;:&quot;false&quot;,&quot;single_page_checkout_enabled&quot;:&quot;true&quot;,&quot;authors_can_set_course_prices&quot;:&quot;true&quot;,&quot;send_lead_confirmation_emails&quot;:&quot;true&quot;,&quot;affiliate_cookie_duration_days&quot;:&quot;365&quot;,&quot;authors_can_issue_certificates&quot;:&quot;true&quot;,&quot;store_student_cards_separately&quot;:&quot;true&quot;,&quot;authors_can_manage_certificates&quot;:&quot;true&quot;,&quot;authors_can_manage_course_pages&quot;:&quot;true&quot;,&quot;prevent_new_coupon_applications&quot;:&quot;true&quot;,&quot;disable_js_course_event_tracking&quot;:&quot;false&quot;,&quot;exclusive_vat_on_custom_gateways&quot;:&quot;true&quot;,&quot;is_edit_site_onboarding_complete&quot;:&quot;false&quot;,&quot;send_certificate_issuance_emails&quot;:&quot;true&quot;,&quot;owner_teachable_accounts_required&quot;:&quot;true&quot;,&quot;prevent_payment_plan_cancellation&quot;:&quot;true&quot;,&quot;send_subscription_reminder_emails&quot;:&quot;true&quot;,&quot;automatically_add_disqus_attachments&quot;:&quot;true&quot;,&quot;recalc_course_pct_on_lecture_publish&quot;:&quot;false&quot;,&quot;send_confirmation_instructions_emails&quot;:&quot;true&quot;,&quot;send_limited_time_unenrollment_emails&quot;:&quot;true&quot;,&quot;turn_off_myteachable_sign_up_branding&quot;:&quot;true&quot;}" data-accessible-features="[&quot;bulk_enroll_students&quot;,&quot;manually_importing_users&quot;,&quot;native_certificates&quot;,&quot;earnings_statements&quot;,&quot;teachable_payments&quot;,&quot;teachable_u&quot;,&quot;course_compliance&quot;,&quot;page_editor_v2&quot;,&quot;certificates_editor_v2&quot;,&quot;drip_content&quot;,&quot;custom_domain&quot;,&quot;coupons&quot;,&quot;graded_quizzes&quot;,&quot;email&quot;,&quot;course_reports&quot;,&quot;webhooks&quot;,&quot;integrations&quot;,&quot;zapier_action_create_user&quot;,&quot;teachable_payments_payout_view&quot;,&quot;upsells&quot;,&quot;facebook_pixel&quot;,&quot;user_search_filters&quot;,&quot;user_tags&quot;,&quot;multiple_course_pages&quot;,&quot;proration_upgrade_flow&quot;,&quot;cross_border_payments&quot;,&quot;limited_time_enrollments&quot;,&quot;sales_tax_on_student_checkout&quot;,&quot;new_device_confirmation&quot;,&quot;elasticsearch_users&quot;,&quot;elasticsearch_transactions&quot;,&quot;reset_progress&quot;,&quot;fraud_warnings&quot;,&quot;paypal_through_tp&quot;,&quot;new_creator_checkout&quot;,&quot;circle_oauth&quot;]" data-course-data="{}" /><meta id="analytics-keys" name="analytics" data-analytics="{&quot;Google Analytics&quot;:{&quot;trackingId&quot;:&quot;UA-153506181-1&quot;,&quot;enhancedEcommerce&quot;:true,&quot;sendUserId&quot;:true,&quot;schoolDomain&quot;:&quot;developedbyed.com&quot;,&quot;anonymizeIp&quot;:true}}" />
+    
+    <div class="root" onclick="offMenu(event)">
+  
+<a id="top"></a>
+
+<style id="ncs">
+  :root {
+    
+    --header_width: 960px;
+  }
+ 
+</style>
+
+<header id="header" class="header header-sticky">
+
+  <nav
+    class="navbar is-not-signed-in is-homepage  at-top"
+    id='navbar'
+    role='navigation'>
+    <div class='navbar__header'>
+
+      
+        
+          <div class="logo"><a href="index.html">CodewithShasha</a></div>
+        </a>
+      
+        
+      
+      <div class="navbar__menu">
+          <button for="f-toggle" tabindex="0" role="button" id="hamburger" class="hamburger" aria-label="Toggle navigation"
+          onclick="toggleMenu('hamburger-menu')">
+          <span></span>
+          </button>
+        
+    
+
+    </div>
+  </nav>
+</header>
+
+      
+      <main class='view-school page-layout-v2 main'>
+        
+  
+
+  
+
+  
+
+  
+    <div id="blocks" data-ss-school-id='357209' class="blocks-page blocks-page-blank_page_v2 ">
+  
+  
+
+
+  
+    
+
+      <style type='text/css'>.b-102710007-top { padding-top: 22.400000000000002px; } .b-102710007-bottom { padding-bottom: 22.400000000000002px; } .b-102710007-alignment { text-align: center; } .b-102710007-content_width { max-width: 668px; } .b-102710007-image_overlay { opacity: 0.5; } .b-102710007-background_color { background-color: #232323; } .b-102710007-heading_text_color { color: #FFFFFF; } .b-102710007-button_border_radius { border-radius: 25px; } .b-102710007-subheading_text_color { color: #FFFFFF; }</style>
+        <div class="course-block block banner  " id="block-102710007">
+      
+
+
+
+
+  <style>
+    
+      .banner .b-102710007-heading_text_color {
+        color: #FFFFFF
+      }
+    
+
+    
+      .banner .b-102710007-subheading_text_color {
+        color: #FFFFFF
+      }
+    
+
+    .banner__button.b-102710007-button_border_radius {
+      border-radius: 25;
+    }
+
+    @media screen and (min-width: 768px) {
+      .b-102710007-top {
+        padding-top: 40px;
+      }
+      .b-102710007-bottom {
+        padding-bottom: 40px;
+      }
+    }
+    .bl {
+      width: 100%;
+    }
+  </style>
+
+<section class="banner b-102710007-background_color">
+  <img
+    src='https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGluZ3xlbnwwfHwwfHw%3D&w=1000&q=80' alt=''
+    data-target="block.data.image_url "
+    class=b-102710007-image_overlay
+  />
+  <div class="bl">
+    <div class="banner__inner b-102710007-alignment b-102710007-bottom b-102710007-top b-102710007-content_width">
+      <div class="banner__heading-group">
+        
+          <div data-target="block.data.heading_text" class="header b-102710007-heading_text_color rich-text">
+            <h2><strong>Coding and design courses </strong></h2>
+          </div>
+        
+        
+          <div data-target="block.data.subheading_text" class="subheader b-102710007-subheading_text_color rich-text">
+            <p><strong>Learn programming technologies like HTML &amp; CSS, Javascript, Python and more.</strong></p>
+          </div>
+        
+      </div>
+      
+        <div class="banner__button-wrapper">
+          <a href='Courses.html'
+             rel="noopener"
+          >
+            <button
+              class='banner__button b-102710007-button_border_radius base-button'
+              data-target="block.data.button_text"
+            >
+              View Courses
+            </button>
+          </a>
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+
+      
+        </div>
+      
+
+    
+  
+
+
+
+
+  
+    
+
+      <style type='text/css'>.b-102710008-top { padding-top: 44.800000000000004px; } .b-102710008-bottom { padding-bottom: 44.800000000000004px; } .b-102710008-card_style { --card_style: grid; } .b-102710008-gutter_width { --gutter-width: 50px; } .b-102710008-content_width { max-width: 960px; } .b-102710008-heading_color { color: #36414D; } .b-102710008-background_color { background-color: #eef1f1; } .b-102710008-card_border_color { border-color: #000000; } .b-102710008-card_border_width { border-width: 0px; } .b-102710008-card_border_radius { border-radius: 20px; } .b-102710008-card_text_alignment { text-align: center; } .b-102710008-button_border_radius { border-radius: 10px; } .b-102710008-card_background_color { background-color: #FFFFFF; }</style>
+
+      
+        <div class="course-block block featured_products  " id="block-102710008">
+      
+
+      <style>
+  .block__featured-products__heading_text.b-102710008-heading_color {
+    color: #36414D;
+  }
+  .block__featured-products.b-102710008-background_color {
+    background-color: #eef1f1;
+  }
+  .block__featured-products .b-102710008-card_border_color,
+  .block__featured-products .b-102710008-card_border_width {
+    border: 0px solid #000000;
+  }
+  .block__featured-products .b-102710008-card_text_alignment .featured-product-card__content__title,
+  .block__featured-products .b-102710008-card_text_alignment .course-card__content__subtitle {
+    text-align: center;
+  }
+  .featured-product-card.b-102710008-card_background_color {
+    background-color: #FFFFFF;
+  }
+  .block__featured-products__button .b-102710008-button_border_radius {
+    border-radius: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    .b-102710008-top {
+      padding-top: 80px;
+    }
+    .b-102710008-bottom {
+      padding-bottom: 80px;
+    }
+    
+    .b-102710008-gutter_width .block__columns, .b-102710008-gutter_width .block__columns__fixed {
+        grid-column-gap: 50px;
+    }
+    
+  }
+</style>
+
+
+
+  <section class="bl block__featured-products block__featured-products__cards block__columns-per-row--3 b-102710008-top b-102710008-bottom b-102710008-gutter_width b-102710008-background_color">
+    <div class="block__featured-products__heading_text b-102710008-heading_color rich-text"><h4><strong></strong></h4></div>
+    <div class="block__columns b-102710008-content_width">
+      
+        
+
+
+
+
+      
+        
+
+
+
+  
+          
+        </p>
+      </div>
+    </div>
+  </a>
+</div>
+
+      
+        
+
+      
+
+
+  
+    
+
+      <style type='text/css'>.b-102710009-top { padding-top: 22.400000000000002px; } .b-102710009-bottom { padding-bottom: 22.400000000000002px; } .b-102710009-content_width { width: 960px; } .b-102710009-heading_color { color: #36414D; } .b-102710009-background_color { background-color: #FFFFFF; } .b-102710009-description_color { color: #36414D; }</style>
+
+      
+        <div class="course-block block video  " id="block-102710009">
+      
+
+        
+
+
+<style>
+  @media screen and (min-width: 768px) {
+    .b-102710009-top {
+      padding-top: 40px;
+    }
+    .b-102710009-bottom {
+      padding-bottom: 40px;
+    }
+  }
+</style>
+
+    
+  </div>
+</section>
+
+
+      
+        </div>
+      
+
+    
+  
+
+
+  
+
+
+  
+    
+
+      <style type='text/css'>.b-102710010-top { padding-top: 22.400000000000002px; } .b-102710010-bottom { padding-bottom: 22.400000000000002px; } .b-102710010-text_color { color: #36414D; } .b-102710010-background_color { background-color: #FFFFFF; } .b-102710010-heading_text_color { color: #36414D; }</style>
+
+      
+        <div class="course-block block email_leads_form  " id="block-102710010">
+      
+
+        
+
+<style>
+@media screen and (min-width: 768px) {
+  .b-102710010-top {
+    padding-top: 40px;
+  }
+  .b-102710010-bottom {
+    padding-bottom: 40px;
+  }
+}
+</style>
+<section class="block__empty-state block__email_leads bl b-102710010-top b-102710010-bottom b-102710010-background_color b-102710010-text_color">
+  <form onsubmit="return false"
+    data-block-id="102710010"
+    data-source="Email Leads"
+    data-ss-school-id='357209'>
+      <h4 class="b-102710010-heading_text_color"><strong>Let’s keep in touch</strong></h4>
+      <p>Subscribe to the mailing list and receive the latest updates</p>
+      <fieldset>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" name="email" class="block__email_leads__input" required />
+        </div>
+        
+          <div class="block__email_leads__checkbox_wrapper">
+            <input type="checkbox" name="consent" class="block__email_leads__checkbox" required/>
+            <label for="consent">
+              By clicking this checkbox, you consent to receiving emails from US
+            </label>
+          </div>
+        
+      </fieldset>
+
+      <button class="base-button" type="submit">Subscribe</button>
+      <p class="disclaimer_text" >We respect your privacy.</p>
+      <div class="block__email_leads__error"></div>
+  </form>
+  <div id="status-102710010" class="block__email_leads__success" hidden>
+    Check your inbox 
+  </div>
+</section>
+
+
+      
+        </div>
+      
+
+    
+  
+
+
+  
+
+  
+    </div>
+  
+
+
+
+
+
+
+
+
+      </main>
+      
+        
+<style id="footerStyles">
+  :root {
+    --footer_width: 960px;
+  }
+  footer a{
+    text-decoration: none;
+  }
+</style>
+<footer class=''>
+  <div class="footer">
+    <div class='footer__wrapper'>
+      <div class='footer__inner'>
+        <ul class="footer__list">
+          <li class="footer__copyright">
+            &copy;
+            <a href="index.html">CodewithShasha</a> | Creative Programming and Design Courses
+            2022
+          </li>
+          
+              
+                  <li>
+                      
+                    <a href='#' target='_blank'>
+                      Instagram
+                      </a>
+                  </li>
+              
+                  <li>
+                      <a href='https://twitter.com/ShahadhMohamed' target='_blank'>
+                      Twitter
+                      </a>
+                  </li>
+                  <a href='https://www.pinterest.com/codewithshasha' target='_blank'>
+                    Pinterest
+                    </a>
+                  <li>
+                     
+                  </li>
+              
+          
+        </ul>
+        <ul class="footer__list legal-links">
+          <li>
+            <a href="/p/terms">
+            
+            </a>
+          </li>
+          <li>
+            <a href="/p/privacy">
+            
+            </a>
+          </li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+      
+    </div>
+    <script>
+      if (!Element.prototype.closest) {
+        Element.prototype.closest = function(s) {
+          let el = this;
+          do {
+            if (el.matches(s)) return el;
+            el = el.parentElement || el.parentNode;
+          } while (el !== null && el.nodeType === 1);
+          return null;
+        };
+      }
+      const offMenu = event => {
+      if (event.target.closest('.navbar__menu')) return
+      document
+        .querySelectorAll('.menu')
+        .forEach(item => {
+          item.classList.add('hidden')
+          item.setAttribute('aria-hidden', 'true')
+        })
+      }
+      const toggleMenu = id => {
+  const el = document.getElementById(id)
+  if (el.classList.contains('hidden')) {
+    document
+      .querySelectorAll('.inner-menu')
+      .forEach(item => {
+        item.classList.add('hidden')
+        item.setAttribute('aria-hidden', 'true')
+      })
+    el.classList.remove('hidden')
+    el.setAttribute('aria-hidden', 'false')
+  } else {
+    el.classList.add('hidden')
+    el.setAttribute('aria-hidden', 'true')
+  }
+  !el.classList.contains('hidden') && el.focus()
+}
+
+      // toggle open class for v2 preview bar dropdown menu
+      const v2Dropdown = document.getElementsByClassName('v2-dropdown')[0]
+      const v2DropdownTrigger = document.querySelector('.v2-dropdown .menu-trigger')
+      // if the preview bar dropdown exists, add event listener to toggle preview menu
+      if (!!v2Dropdown) {
+        v2DropdownTrigger.addEventListener('click', () => {
+          v2Dropdown.classList.toggle('open')
+        })
+      }
+
+      const domBody = document.body
+      const usingMouse = 'using-mouse'
+      domBody.addEventListener('mousedown', () => {
+        domBody.classList.add(usingMouse)
+      })
+      domBody.addEventListener('keydown', () => {
+        domBody.classList.remove(usingMouse)
+      })
+
+      const headerEl = document.querySelector('#navbar')
+      const topHook = document.querySelector('#top')
+      if (
+        "IntersectionObserver" in window
+      ) {
+        const observer = new IntersectionObserver(entries => {
+          if (entries[0].boundingClientRect.y < 0) {
+            headerEl.classList.remove('at-top')
+          } else {
+            headerEl.classList.add('at-top')
+          }
+        },{threshold: 1});
+        observer.observe(topHook)
+      }
+    </script>
+
+    
+
+  </body>
+</html>
